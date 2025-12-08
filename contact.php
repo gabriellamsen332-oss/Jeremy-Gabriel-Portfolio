@@ -13,7 +13,7 @@
                 <h1>Jeremy Gabriel L. Batac</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index-local.html">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php" class="active">Contact</a></li>
             </ul>
