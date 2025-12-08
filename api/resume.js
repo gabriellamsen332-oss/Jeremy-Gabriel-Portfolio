@@ -1,6 +1,6 @@
 const PDFDocument = require('pdfkit');
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   try {
     const doc = new PDFDocument({
       size: 'A4',
@@ -65,4 +65,4 @@ module.exports = async (req, res) => {
     console.error('PDF generation error:', error);
     res.status(500).json({ error: 'Failed to generate PDF' });
   }
-};
+}
