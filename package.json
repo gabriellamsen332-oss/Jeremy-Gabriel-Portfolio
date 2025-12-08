@@ -1,0 +1,17 @@
+{
+  "name": "jeremy-gabriel-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "dev:php": "php -S localhost:8000 -t . index-local.html",
+    "build": "echo 'Build complete'"
+  },
+  "dependencies": {
+    "pdfkit": "^0.15.0"
+  },
+  "devDependencies": {},
+  "author": "Jeremy Gabriel L. Batac",
+  "license": "MIT"
+}

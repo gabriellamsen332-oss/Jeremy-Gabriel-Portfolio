@@ -1,6 +1,9 @@
-vendor/
-composer.phar
-composer.lock
+node_modules/
+.vercel
+.env
 .DS_Store
 *.log
+index-local.html
 data/messages.txt
+
+vendor/
