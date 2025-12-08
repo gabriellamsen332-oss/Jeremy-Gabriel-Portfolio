@@ -8,3 +8,5 @@ index.html
 about.html
 contact.html
 node_modules/
+.vercel
+.env*.local
