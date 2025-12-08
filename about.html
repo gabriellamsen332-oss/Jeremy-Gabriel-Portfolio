@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="resume-download">
-                    <a href="/api/resume" class="btn btn-primary" download>
+                    <a href="download_resume.php" class="btn btn-primary" id="resume-btn" download>
                         <span>📄</span> Download My Resume
                     </a>
                 </div>
@@ -81,5 +81,10 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+            document.getElementById('resume-btn').href = '/api/resume';
+        }
+    </script>
 </body>
 </html>

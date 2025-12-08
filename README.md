@@ -33,9 +33,6 @@ cd Jeremy-Gabriel-Portfolio
 
 # Start PHP server
 php -S localhost:8000
-
-# Or use npm script
-npm run dev:php
 ```
 
 Visit: `http://localhost:8000/index-local.html`
