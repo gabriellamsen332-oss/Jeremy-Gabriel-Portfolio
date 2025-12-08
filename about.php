@@ -1,12 +1,10 @@
 <?php
-// Read personal information from file
 $aboutFile = 'data/about.txt';
 $aboutInfo = [];
 
 if (file_exists($aboutFile)) {
     $content = file_get_contents($aboutFile);
     if ($content) {
-        // Parse the data (expecting format: key:value per line)
         $lines = explode("\n", trim($content));
         foreach ($lines as $line) {
             if (strpos($line, ':') !== false) {
@@ -17,13 +15,12 @@ if (file_exists($aboutFile)) {
     }
 }
 
-// Set default values if file doesn't exist or is empty
 $name = $aboutInfo['name'] ?? 'Jeremy Gabriel L. Batac';
 $age = $aboutInfo['age'] ?? '19';
 $block = $aboutInfo['block'] ?? '21-ITE-04';
 $title = $aboutInfo['title'] ?? 'IT Student';
-$bio = $aboutInfo['bio'] ?? 'I am a 19-year-old Information Technology student at the University of Pangasinan, currently in Block 21-ITE-04. I am passionate about learning new technologies and developing my skills in programming and web development.';
-$email = $aboutInfo['email'] ?? 'jeremygabriel@example.com';
+$bio = $aboutInfo['bio'] ?? 'I am a 19-year-old Information Technology student at the Universidad De Dagupan, currently in Block 21-ITE-04. I am passionate about learning new technologies and developing my skills in programming and web development.';
+$email = $aboutInfo['email'] ?? 'gabriellamsen332@gmail.com';
 $location = $aboutInfo['location'] ?? 'Arellano St., Pantal, Dagupan City, 2400, North Luzon, Philippines';
 ?>
 <!DOCTYPE html>
@@ -55,7 +52,7 @@ $location = $aboutInfo['location'] ?? 'Arellano St., Pantal, Dagupan City, 2400,
                 
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="assets/img/profile.jpg" alt="<?php echo htmlspecialchars($name); ?>">
+                        <img src="assets/img/profile.jpeg" alt="<?php echo htmlspecialchars($name); ?>">
                     </div>
                     
                     <div class="about-text">
@@ -94,12 +91,20 @@ $location = $aboutInfo['location'] ?? 'Arellano St., Pantal, Dagupan City, 2400,
                         <li>Programming Fundamentals</li>
                     </ul>
                 </div>
+
+                <div class="resume-download">
+                    <a href="download_resume.php" class="btn btn-primary" download>
+                        <span>📄</span> Download My Resume
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Jeremy Gabriel. All rights reserved.</p>
+        <p>&copy; 2025 Jeremy Gabriel L. Batac. All rights reserved.</p>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

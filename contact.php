@@ -27,12 +27,23 @@
                 <p>Have a question or want to work together? Feel free to reach out!</p>
 
                 <?php
-                // Display success/error messages if redirected from submit_contact.php
                 if (isset($_GET['status'])) {
+                    $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
+                    
                     if ($_GET['status'] == 'success') {
-                        echo '<div class="alert alert-success">Thank you for your message! I will get back to you soon.</div>';
+                        if ($msg == 'email_pending') {
+                            echo '<div class="alert alert-success">Thank you! Your message has been saved. Email notification is pending.</div>';
+                        } else {
+                            echo '<div class="alert alert-success">✓ Thank you for your message! I have received it and will get back to you soon.</div>';
+                        }
                     } elseif ($_GET['status'] == 'error') {
-                        echo '<div class="alert alert-error">Sorry, there was an error sending your message. Please try again.</div>';
+                        if ($msg == 'missing_fields') {
+                            echo '<div class="alert alert-error">✗ Please fill in all required fields.</div>';
+                        } elseif ($msg == 'invalid_email') {
+                            echo '<div class="alert alert-error">✗ Please enter a valid email address.</div>';
+                        } else {
+                            echo '<div class="alert alert-error">✗ Sorry, there was an error sending your message. Please try again.</div>';
+                        }
                     }
                 }
                 ?>
@@ -63,7 +74,7 @@
 
                 <div class="contact-info">
                     <h3>Other Ways to Reach Me</h3>
-                    <p><strong>Email:</strong> jeremygabriel@example.com</p>
+                    <p><strong>Email:</strong>gabriellamsen332@gmail.com</p>
                     <p><strong>Location:</strong> Arellano St., Pantal, Dagupan City, 2400, North Luzon, Philippines</p>
                 </div>
             </div>
@@ -71,7 +82,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Jeremy Gabriel. All rights reserved.</p>
+        <p>&copy; 2025 Jeremy Gabriel L. Batac. All rights reserved.</p>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

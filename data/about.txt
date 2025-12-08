@@ -2,6 +2,6 @@ name:Jeremy Gabriel L. Batac
 age:19
 block:21-ITE-04
 title:IT Student
-bio:I am a 19-year-old Information Technology student at the University of Pangasinan, currently in Block 21-ITE-04. I am passionate about learning new technologies and developing my skills in programming and web development.
-email:jeremygabriel@example.com
+bio:I am a 19-year-old Information Technology student at the Universidad De Dagupan, currently in Block 21-ITE-04. I am passionate about learning new technologies and developing my skills in programming and web development.
+email:gabriellamsen332@gmail.com
 location:Arellano St., Pantal, Dagupan City, 2400, North Luzon, Philippines
