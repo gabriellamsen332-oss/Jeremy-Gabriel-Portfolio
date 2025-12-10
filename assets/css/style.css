@@ -677,6 +677,48 @@ main {
     color: var(--primary-red);
 }
 
+/* Editable Description Section */
+.description-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--card-bg);
+    border: 2px solid var(--border-glow);
+    border-radius: 15px;
+}
+
+.description-section h3 {
+    color: var(--primary-red);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.editable-description {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed var(--border-glow);
+    border-radius: 10px;
+    padding: 1.5rem;
+    min-height: 150px;
+    color: var(--text-gray);
+    line-height: 1.8;
+    transition: all 0.3s ease;
+    cursor: text;
+}
+
+.editable-description:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.editable-description:empty:before {
+    content: attr(data-placeholder);
+    color: var(--text-light-gray);
+}
+
+#saveDescription {
+    margin-top: 1rem;
+}
+
 /* Footer */
 footer {
     background: rgba(0, 0, 0, 0.8);

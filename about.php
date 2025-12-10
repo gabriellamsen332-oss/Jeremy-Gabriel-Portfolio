@@ -92,6 +92,14 @@ $location = $aboutInfo['location'] ?? 'Arellano St., Pantal, Dagupan City, 2400,
                     </ul>
                 </div>
 
+                <div class="description-section">
+                    <h3>Description</h3>
+                    <div contenteditable="true" class="editable-description" id="description">
+                        Click here to edit your description...
+                    </div>
+                    <button class="btn btn-secondary" id="saveDescription">Save Description</button>
+                </div>
+
                 <div class="resume-download">
                     <a href="download_resume.php" class="btn btn-primary" download>
                         <span>📄</span> Download My Resume
@@ -106,5 +114,20 @@ $location = $aboutInfo['location'] ?? 'Arellano St., Pantal, Dagupan City, 2400,
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        const descriptionEl = document.getElementById('description');
+        const saveBtn = document.getElementById('saveDescription');
+        
+        const savedDescription = localStorage.getItem('aboutDescription');
+        if (savedDescription) {
+            descriptionEl.textContent = savedDescription;
+        }
+        
+        saveBtn.addEventListener('click', () => {
+            const description = descriptionEl.textContent;
+            localStorage.setItem('aboutDescription', description);
+            alert('Description saved successfully!');
+        });
+    </script>
 </body>
 </html>
